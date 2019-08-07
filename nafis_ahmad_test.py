@@ -20,7 +20,10 @@ class Ntest(unittest.TestCase):
 		self.assertEqual(b.compa('2', '2.0.0.0.0'), 'equal')
 		self.assertEqual(b.compa('30', '2.1.2.0.1'), 'greater')
 		self.assertEqual(b.compa('8.04.84', '1.1.2.0.1'), 'greater')
+		## value error is not considered ... 
+		#self.assertEqual(b.compa('1.a', '1.b1.2.0.1'), 'greater')
 		
+
 	def test_c_sum(self):
 		import time
 	
