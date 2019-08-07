@@ -7,6 +7,10 @@ class Ntest(unittest.TestCase):
 		self.assertEqual(a.does_overlaps( (1, 5), (2, 6)), True, "Overlaping ... ")
 		self.assertEqual(a.does_overlaps( (1, 5), (6, 8)), False, "Not Overlaping ... ")
 		self.assertEqual(a.does_overlaps( (2, 6), (1, 5)), True, "Overlaping ... ")
+
+		self.assertEqual(a.does_overlaps( (2, 6), (1, 5)), True, "Overlaping ... ")
+		self.assertEqual(a.does_overlaps( (6, 8), (1, 5)), False, "Not Overlaping ... ")
+		self.assertEqual(a.does_overlaps( (1, 5), (2, 6)), True, "Overlaping ... ")
 	
 	def test_b(self):
 		self.assertEqual(b.compa('1.1', '1.2'), 'less')
@@ -20,11 +24,6 @@ class Ntest(unittest.TestCase):
 	def test_c_sum(self):
 		import time
 	
-
-		
-
-		# print sum([6, 22])
-		# print hello('nafis')
 		c.CACHE_LIFE_TIME_IN_SEC = 2
 		
 		self.assertEqual(c.ncache(sum, [6, 22, 9, 121]), 158, 'no chaching / init ');

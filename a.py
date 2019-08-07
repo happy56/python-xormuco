@@ -16,6 +16,12 @@ def does_overlaps(a, b):
 	if a[0] <= b[1] <= a[1]:
 		return True
 
+	if b[0] <= a[0] <= b[1]:
+		return True
+
+	if b[0] <= a[1] <= b[1]:
+		return True
+
 	return False
 
 
